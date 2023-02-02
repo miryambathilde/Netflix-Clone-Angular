@@ -1,30 +1,26 @@
-.navbar {
-  &-brand {
-    color: red;
-    font-weight: 900;
-    font-size: 30px;
-  }
-  &-nav {
-    color: red;
-  }
+$color_1: red;
+$color_2: #fff;
+$color_3: white;
+
+.navbar-brand {
+  color: $color_1;
+  font-weight: 900;
+  font-size: 30px;
 }
-
-.nav {
-  &-item {
-    color: red;
-    font-size: 18px;
-    font-weight: 700;
-  }
-
-  &-link.active {
-    color: #fff;
-  }
+.navbar-nav {
+  color: $color_1;
 }
-
+.nav-item {
+  color: $color_1;
+  font-size: 18px;
+  font-weight: 700;
+}
+.nav-link.active {
+  color: $color_2;
+}
 .btn {
-  color: red;
-  /* hover */
+  color: $color_1;
   &:hover {
-    color: white;
+    color: $color_3;
   }
 }
