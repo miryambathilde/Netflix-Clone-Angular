@@ -1,8 +1,8 @@
-<section class="banner">
+<section class="banner-slider">
   <div class="contain-fluid">
     <div id="carouselExampleDark" class="carousel carousel-light slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="3000"
+        <div class="carousel-item active" data-bs-interval="2500"
           *ngFor="let b of bannerResult;let i=index" [ngClass]="{active:i===1}">
           <img src="https://image.tmdb.org/t/p/original/{{ b.backdrop_path }}" class="d-block w-100"
             alt="...">

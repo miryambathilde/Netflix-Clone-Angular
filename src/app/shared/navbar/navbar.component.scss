@@ -1,6 +1,7 @@
 $color_1: red;
 $color_2: #fff;
 $color_3: white;
+$color_4: #ee0808;
 
 .navbar-brand {
   color: $color_1;
@@ -17,6 +18,9 @@ $color_3: white;
 }
 .nav-link.active {
   color: $color_2;
+  &:hover, :focus {
+    color: $color_4;
+  }
 }
 .btn {
   color: $color_1;
