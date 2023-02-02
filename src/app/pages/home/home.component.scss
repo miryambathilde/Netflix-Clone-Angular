@@ -1,5 +1,6 @@
 $red: #E50914;
 $white: #ffffff;
+$white-transparent: #ffffff5d;
 
 .carousel-inner {
   height: 700px;
@@ -14,6 +15,7 @@ $white: #ffffff;
 .carousel-caption {
   padding: 20px 30px;
   background-color: #181818ab;
+  border: 1px solid $white-transparent;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -43,6 +45,12 @@ $white: #ffffff;
   box-sizing: content-box;
   transition: transform 450ms;
   margin-right: 7px;
+  border-radius: 5px;
+  border: 1px solid $white;
+  -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
   &:hover {
     transform: scale(1.09);
     cursor: pointer;
