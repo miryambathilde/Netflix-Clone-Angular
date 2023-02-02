@@ -9,6 +9,7 @@ import { MovieDetailsComponent } from './pages/movie-details/movie-details.compo
 import { SearchComponent } from './pages/search/search.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { MoviesService } from './services/movies.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MoviesService } from './services/movies.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [MoviesService],
   bootstrap: [AppComponent]
