@@ -1,0 +1,30 @@
+.navbar {
+  &-brand {
+    color: red;
+    font-weight: 900;
+    font-size: 30px;
+  }
+  &-nav {
+    color: red;
+  }
+}
+
+.nav {
+  &-item {
+    color: red;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &-link.active {
+    color: #fff;
+  }
+}
+
+.btn {
+  color: red;
+  /* hover */
+  &:hover {
+    color: white;
+  }
+}
