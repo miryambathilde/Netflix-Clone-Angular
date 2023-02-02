@@ -17,8 +17,7 @@ export class MoviesSliderComponent implements OnInit {
   }
 
   bannerData () {
-    this.moviesService.bannerApiData().subscribe((result) => {
-      console.log(result, 'bannerresult#');
+    this.moviesService.sliderMovies().subscribe((result) => {
       this.bannerResult = result.results;
     });
   }

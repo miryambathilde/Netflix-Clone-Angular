@@ -9,76 +9,75 @@ import { MoviesService } from 'src/app/services/movies.service';
 })
 export class HomeComponent implements OnInit {
 
-  trendingMovieResult?: any = [];
-  actionMovieResult?: any = [];
-  adventureMovieResult?: any = [];
-  animationMovieResult?: any = [];
-  comedyMovieResult?: any = [];
-  documentaryMovieResult?: any = [];
-  sciencefictionMovieResult?: any = [];
-  thrillerMovieResult?: any = [];
+  trendingMovieResults?: any = [];
+  actionMovieResults?: any = [];
+  adventureMovieResults?: any = [];
+  animationMovieResults?: any = [];
+  comedyMovieResults?: any = [];
+  documentaryMovieResults?: any = [];
+  sciencefictionMovieResults?: any = [];
+  thrillerMovieResults?: any = [];
 
   constructor (private moviesService: MoviesService, private title: Title, private meta: Meta) { }
 
   ngOnInit (): void {
-    this.trendingData();
-    this.actionMovie();
-    this.adventureMovie();
-    this.comedyMovie();
-    this.animationMovie();
-    this.documentaryMovie();
-    this.sciencefictionMovie();
-    this.thrillerMovie();
+    this.trendingMovies();
+    this.actionMovies();
+    this.adventureMovies();
+    this.comedyMovies();
+    this.animationMovies();
+    this.documentaryMovies();
+    this.sciencefictionMovies();
+    this.thrillerMovies();
   }
 
 
-  trendingData () {
-    this.moviesService.trendingMovieApiData().subscribe((result) => {
+  trendingMovies () {
+    this.moviesService.getTrendingMovies().subscribe((result) => {
       console.log(result, 'trendingresult#');
-      this.trendingMovieResult = result.results;
-      // this.trendingMovieResult
+      this.trendingMovieResults = result.results;
     });
   }
 
-  actionMovie () {
-    this.moviesService.fetchActionMovies().subscribe((result) => {
-      this.actionMovieResult = result.results;
+  actionMovies () {
+    this.moviesService.getActionMovies().subscribe((result) => {
+      this.actionMovieResults = result.results;
     });
   }
 
-  adventureMovie () {
-    this.moviesService.fetchAdventureMovies().subscribe((result) => {
-      this.adventureMovieResult = result.results;
+  adventureMovies () {
+    this.moviesService.getAdventureMovies().subscribe((result) => {
+      this.adventureMovieResults = result.results;
     });
   }
 
-  animationMovie () {
-    this.moviesService.fetchAnimationMovies().subscribe((result) => {
-      this.animationMovieResult = result.results;
+  animationMovies () {
+    this.moviesService.getAnimationMovies().subscribe((result) => {
+      this.animationMovieResults = result.results;
     });
   }
 
-  comedyMovie () {
-    this.moviesService.fetchComedyMovies().subscribe((result) => {
-      this.comedyMovieResult = result.results;
+  comedyMovies () {
+    this.moviesService.getComedyMovies().subscribe((result) => {
+      this.comedyMovieResults = result.results;
     });
   }
 
-  documentaryMovie () {
-    this.moviesService.fetchDocumentaryMovies().subscribe((result) => {
-      this.documentaryMovieResult = result.results;
+  documentaryMovies () {
+    this.moviesService.getDocumentaries().subscribe((result) => {
+      this.documentaryMovieResults = result.results;
     });
   }
 
-  sciencefictionMovie () {
-    this.moviesService.fetchScienceFictionMovies().subscribe((result) => {
-      this.sciencefictionMovieResult = result.results;
+  sciencefictionMovies () {
+    this.moviesService.getScienceFictionMovies().subscribe((result) => {
+      this.sciencefictionMovieResults = result.results;
     });
   }
 
-  thrillerMovie () {
-    this.moviesService.fetchThrillerMovies().subscribe((result) => {
-      this.thrillerMovieResult = result.results;
+  thrillerMovies () {
+    this.moviesService.getThrillerMovies().subscribe((result) => {
+      this.thrillerMovieResults = result.results;
     });
   }
 
