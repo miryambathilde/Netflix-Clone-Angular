@@ -10,10 +10,7 @@ import { MoviesService } from 'src/app/services/movies.service';
 })
 export class SearchComponent implements OnInit {
 
-  constructor (private moviesService: MoviesService, private title: Title, private meta: Meta) {
-    /* this.title.setTitle('Search movies - showtime');
-    this.meta.updateTag({ name: 'description', content: 'search here movies like avatar,war etc' }); */
-  }
+  constructor (private moviesService: MoviesService, private title: Title, private meta: Meta) {}
 
   ngOnInit (): void {
   }
@@ -29,6 +26,7 @@ export class SearchComponent implements OnInit {
       /* TODO: REFACTORING AND CONSOLE.LOG */
       console.log(result, 'searchmovie##');
       this.searchResult = result.results;
+      this.searchForm.reset();
     });
   }
 

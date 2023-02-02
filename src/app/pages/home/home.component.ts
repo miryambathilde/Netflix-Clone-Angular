@@ -9,15 +9,15 @@ import { MoviesService } from 'src/app/services/movies.service';
 })
 export class HomeComponent implements OnInit {
 
-  bannerResult: any = [];
-  trendingMovieResult: any = [];
-  actionMovieResult: any = [];
-  adventureMovieResult: any = [];
-  animationMovieResult: any = [];
-  comedyMovieResult: any = [];
-  documentaryMovieResult: any = [];
-  sciencefictionMovieResult: any = [];
-  thrillerMovieResult: any = [];
+  bannerResult?: any = [];
+  trendingMovieResult?: any = [];
+  actionMovieResult?: any = [];
+  adventureMovieResult?: any = [];
+  animationMovieResult?: any = [];
+  comedyMovieResult?: any = [];
+  documentaryMovieResult?: any = [];
+  sciencefictionMovieResult?: any = [];
+  thrillerMovieResult?: any = [];
 
   constructor (private moviesService: MoviesService, private title: Title, private meta: Meta) { }
 
@@ -33,7 +33,6 @@ export class HomeComponent implements OnInit {
     this.thrillerMovie();
   }
 
-  // bannerdata
   bannerData () {
     this.moviesService.bannerApiData().subscribe((result) => {
       console.log(result, 'bannerresult#');
@@ -49,55 +48,42 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  // action
   actionMovie () {
     this.moviesService.fetchActionMovies().subscribe((result) => {
       this.actionMovieResult = result.results;
     });
   }
 
-
-
-
-  // adventure
   adventureMovie () {
     this.moviesService.fetchAdventureMovies().subscribe((result) => {
       this.adventureMovieResult = result.results;
     });
   }
 
-
-  // animation
   animationMovie () {
     this.moviesService.fetchAnimationMovies().subscribe((result) => {
       this.animationMovieResult = result.results;
     });
   }
 
-
-  // comedy
   comedyMovie () {
     this.moviesService.fetchComedyMovies().subscribe((result) => {
       this.comedyMovieResult = result.results;
     });
   }
 
-  // documentary
   documentaryMovie () {
     this.moviesService.fetchDocumentaryMovies().subscribe((result) => {
       this.documentaryMovieResult = result.results;
     });
   }
 
-
-  // science-fiction
   sciencefictionMovie () {
     this.moviesService.fetchScienceFictionMovies().subscribe((result) => {
       this.sciencefictionMovieResult = result.results;
     });
   }
 
-  // thriller
   thrillerMovie () {
     this.moviesService.fetchThrillerMovies().subscribe((result) => {
       this.thrillerMovieResult = result.results;

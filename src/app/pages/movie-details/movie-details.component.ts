@@ -10,9 +10,9 @@ import { MoviesService } from 'src/app/services/movies.service';
 })
 export class MovieDetailsComponent implements OnInit {
 
-  getMovieDetailResult: any;
-  getMovieVideoResult: any;
-  getMovieCastResult: any;
+  getMovieDetailResult?: any;
+  getMovieVideoResult?: any;
+  getMovieCastResult?: any;
 
   constructor (private moviesService: MoviesService, private router: ActivatedRoute, private title: Title, private meta: Meta) { }
 

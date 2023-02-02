@@ -12,6 +12,13 @@ $white: #ffffff;
 }
 
 .carousel-caption {
+  padding: 20px 30px;
+  background-color: #181818ab;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   h2 {
     color: $red;
     font-weight: bold;
