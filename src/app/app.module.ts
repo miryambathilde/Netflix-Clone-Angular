@@ -10,6 +10,7 @@ import { SearchComponent } from './pages/search/search.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { MoviesService } from './services/movies.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MoviesSliderComponent } from './pages/movies-slider/movies-slider.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     MovieDetailsComponent,
     SearchComponent,
-    NavbarComponent
+    NavbarComponent,
+    MoviesSliderComponent,
   ],
   imports: [
     BrowserModule,

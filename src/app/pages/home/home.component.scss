@@ -2,34 +2,6 @@ $red: #E50914;
 $white: #ffffff;
 $white-transparent: #ffffff5d;
 
-.carousel-inner {
-  height: 700px;
-  .carousel-item {
-    img {
-      height: 700px;
-      object-fit: cover;
-    }
-  }
-}
-
-.carousel-caption {
-  padding: 20px 30px;
-  background-color: #181818ab;
-  border: 1px solid $white-transparent;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  h2 {
-    color: $red;
-    font-weight: bold;
-    font-size: 30px;
-  }
-  p {
-    color: $white;
-  }
-}
 .rowposter {
   display: flex;
   overflow-y: hidden;

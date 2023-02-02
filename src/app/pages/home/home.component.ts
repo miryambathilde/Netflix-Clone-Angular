@@ -9,7 +9,6 @@ import { MoviesService } from 'src/app/services/movies.service';
 })
 export class HomeComponent implements OnInit {
 
-  bannerResult?: any = [];
   trendingMovieResult?: any = [];
   actionMovieResult?: any = [];
   adventureMovieResult?: any = [];
@@ -22,7 +21,6 @@ export class HomeComponent implements OnInit {
   constructor (private moviesService: MoviesService, private title: Title, private meta: Meta) { }
 
   ngOnInit (): void {
-    this.bannerData();
     this.trendingData();
     this.actionMovie();
     this.adventureMovie();
@@ -33,12 +31,6 @@ export class HomeComponent implements OnInit {
     this.thrillerMovie();
   }
 
-  bannerData () {
-    this.moviesService.bannerApiData().subscribe((result) => {
-      console.log(result, 'bannerresult#');
-      this.bannerResult = result.results;
-    });
-  }
 
   trendingData () {
     this.moviesService.trendingMovieApiData().subscribe((result) => {
