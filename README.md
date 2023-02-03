@@ -6,7 +6,7 @@ Clone the project and run
 
 **`npm install`**
 
-This project was developed with:
+#### This project was developed with:
 
   [Angular CLI](https://angular.io/cli)
 
@@ -31,6 +31,8 @@ This project was developed with:
   [ActivatedRoute](https://angular.io/api/router/ActivatedRoute#description)
 
   [AngularFire](https://github.com/angular/angularfire)
+  
+  [Firebase](https://github.com/angular/angularfire): Authentication and Hosting services.
 
 ## Development server
 
