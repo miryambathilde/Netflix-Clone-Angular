@@ -1,0 +1,28 @@
+<section class="login">
+  <div class="container">
+    <h3 class="text-white text-center p-4 mb-4 fw-bold">Sign in</h3>
+    <form novalidate [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label class="form-label text-white fw-bold">* Email</label>
+        <input type="text" class="form-control" placeholder="Introduce your email" formControlName="email" autocomplete="off">
+        <span class="helper-text text-white" data-error="wrong" data-success="right">* Email is required</span>
+      </div>
+      <div class="mb-3">
+        <label class="form-label text-white fw-bold">* Password</label>
+        <input type="password" class="form-control" placeholder="Introduce your password" formControlName="password" help="La contraseña debe tener minimo 8 caracteres" autocomplete="off">
+        <span class="helper-text text-white" data-error="wrong" data-success="right">* Password is required. Minium length 6 characters</span>
+      </div>
+      <div class="buttons mb-3">
+        <input class="btn btn-danger sign-in" [disabled]="!formLogin.valid" type="submit" value="Sign in">
+        <p class="text-white text-center text-uppercase fw-bold">Or</p>
+        <button class="btn btn-warning fw-bold" (click)="onClick()">Login With Google</button>
+      </div>
+      <div class="register">
+        <h5 class="text-white text-center fw-bold">No GOOGLE account or not a member?</h5>
+        <a class="btn btn-primary d-flex justify-content-center register" routerLink="/register" >Sign Up</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- [disabled]="!formLogin.valid" -->

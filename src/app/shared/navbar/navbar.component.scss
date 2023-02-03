@@ -23,8 +23,18 @@ $color_4: #ee0808;
   }
 }
 .btn {
-  color: $color_1;
+  color: $color_2;
   &:hover {
     color: $color_3;
   }
+}
+
+.search {
+  padding: 10px 20px !important;
+}
+
+.logout {
+  margin-top: 0 !important;
+  color: $color_2;
+  padding: 12px 20px;
 }

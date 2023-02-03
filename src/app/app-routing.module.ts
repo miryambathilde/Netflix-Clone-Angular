@@ -3,12 +3,28 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { SearchComponent } from './pages/search/search.component';
 import { MovieDetailsComponent } from './pages/movie-details/movie-details.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import { canActivate, redirectUnauthorizedTo  } from '@angular/fire/auth-guard';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'search', component: SearchComponent },
-  { path: 'movie/:id', component: MovieDetailsComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
+  {
+    path: 'home',
+    component: HomeComponent,
+    ...canActivate(() => redirectUnauthorizedTo(['/login']))
+  },
+  {
+    path: 'search',
+    component: SearchComponent,
+    ...canActivate(() => redirectUnauthorizedTo([ '/login' ]))
+  },
+  {
+    path: 'movie/:id',
+    component: MovieDetailsComponent,
+    ...canActivate(() => redirectUnauthorizedTo([ '/login' ]))
+  },
   { path: '', pathMatch: 'full', redirectTo: '/home' },
   { path: '**', pathMatch: 'full', redirectTo: '/home' }
 ];

@@ -11,6 +11,11 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { MoviesService } from './services/movies.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MoviesSliderComponent } from './pages/movies-slider/movies-slider.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -20,12 +25,16 @@ import { MoviesSliderComponent } from './pages/movies-slider/movies-slider.compo
     SearchComponent,
     NavbarComponent,
     MoviesSliderComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
   ],
   providers: [MoviesService],
   bootstrap: [AppComponent]
