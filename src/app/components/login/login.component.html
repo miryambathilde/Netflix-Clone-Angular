@@ -1,0 +1,23 @@
+<section class="login">
+  <div class="container">
+    <h3 class="text-white text-center p-4 mb-4 fw-bold">Sing in</h3>
+    <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label class="form-label text-white fw-bold">Email</label>
+        <input type="text" class="form-control" placeholder="Introduce your email" formControlName="email" autocomplete="off">
+      </div>
+      <div class="mb-3">
+        <label class="form-label text-white fw-bold">Password</label>
+        <input type="password" class="form-control" placeholder="Introduce your password" formControlName="password" autocomplete="off">
+      </div>
+      <div class="buttons mb-3">
+        <input class="btn btn-danger" type="submit" value="Enviar">
+        <button class="btn btn-warning" (click)="onClick()">Login With Google</button>
+      </div>
+      <div class="register">
+        <h5 class="text-white text-center text-capitalize">No gmail account or not a member?</h5>
+        <a class="btn btn-primary d-flex justify-content-center register" routerLink="/register">Login</a>
+      </div>
+    </form>
+  </div>
+</section>

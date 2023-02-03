@@ -9,12 +9,15 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="home">Home</a>
+          <a class="nav-link active me-2" aria-current="page" routerLink="home">Home</a>
         </li>
         <li class="nav-item ms-2 me-4">
-          <a class="nav-link btn btn-outline-danger" routerLink="search">Search</a>
+          <a class="nav-link btn btn-danger search" routerLink="search">Search</a>
         </li>
       </ul>
+      <!-- only show the logout button if user is logged -->
+      <button (click)="onClick()" class="logout btn btn-primary fw-bold me-4">Logout</button>
+      <!-- <button *ngIf="isLoggedIn === true" (click)="onClick()" class="logout btn btn-primary fw-bold me-4">Logout</button> -->
     </div>
   </div>
 </nav>

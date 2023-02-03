@@ -1,0 +1,18 @@
+.register {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../../../assets/images/login-background.jpg);
+  height: 100vh;
+  .container {
+    padding-top: 13%;
+    width: 20%;
+    min-width: 350px;
+  }
+  .btn {
+    padding: 7px 20px;
+    color: white;
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}
