@@ -18,7 +18,8 @@ $color_4: #ee0808;
 }
 .nav-link.active {
   color: $color_2;
-  &:hover, :focus {
+  &:hover,
+  :focus {
     color: $color_4;
   }
 }
@@ -37,4 +38,25 @@ $color_4: #ee0808;
   margin-top: 0 !important;
   color: $color_2;
   padding: 12px 20px;
+}
+
+@media only screen and (max-width: 991px) {
+  .navbar-toggler {
+    background-color: hsl(0, 0%, 83%) !important;
+  }
+
+  ul.navbar-nav {
+    li.nav-item {
+        width: 118px !important;
+        margin-left: 0 !important;
+        margin-bottom: 10px;
+      }
+    .nav-link, button {
+      width: 98px;
+    }
+    button {
+      display: flex;
+      justify-content: end;
+    }
+  }
 }
