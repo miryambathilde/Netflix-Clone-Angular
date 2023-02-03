@@ -1,1 +1,16 @@
-{}
+{
+  "hosting": {
+    "public": "dist/netflix-clone/",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
