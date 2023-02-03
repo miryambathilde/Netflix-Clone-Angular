@@ -44,3 +44,15 @@
       align-items: center;
   }
 }
+
+@media only screen and (max-width: 991px) {
+  .register {
+    .container {
+        padding-top: 240px;
+        h3 {
+          margin-bottom: 0px!important;
+        }
+      }
+  }
+
+}
