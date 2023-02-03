@@ -8,31 +8,29 @@ Clone the project and run
 
 This project was developed with:
 
-- Tools:
+  [Angular CLI](https://angular.io/cli)
 
-    [Angular CLI](https://angular.io/cli)
+  [Bootstrap 5.2.0](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
 
-    [Bootstrap 5.2.0](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
+  [Google Fonts](https://fonts.google.com/) and [Google Fonts Icons](https://fonts.google.com/icons)
 
-    [Google Fonts](https://fonts.google.com/) and [Google Fonts Icons](https://fonts.google.com/icons)
+  [Angular 14.0.6](https://www.npmjs.com/package/@angular/cli/v/14.0.6)
 
-- [Angular 14.0.6](https://www.npmjs.com/package/@angular/cli/v/14.0.6)
+  [RouterLink](https://angular.io/api/router/RouterLink)
 
-    [RouterLink](https://angular.io/api/router/RouterLink)
+  [NgStyle](https://angular.io/api/common/NgStyle)
 
-    [NgStyle](https://angular.io/api/common/NgStyle)
+  [HttpClientModule](https://angular.io/api/common/http/HttpClientModule)
 
-    [HttpClientModule](https://angular.io/api/common/http/HttpClientModule)
+  [Title](https://angular.io/api/platform-browser/Title)
 
-    [Title](https://angular.io/api/platform-browser/Title)
+  [Meta](https://angular.io/api/platform-browser/Meta)
 
-    [Meta](https://angular.io/api/platform-browser/Meta)
+  [ReactiveFormModules](https://angular.io/api/forms/ReactiveFormsModule)
 
-    [ReactiveFormModules](https://angular.io/api/forms/ReactiveFormsModule)
+  [ActivatedRoute](https://angular.io/api/router/ActivatedRoute#description)
 
-    [ActivatedRoute](https://angular.io/api/router/ActivatedRoute#description)
-
-    [AngularFire](https://github.com/angular/angularfire)
+  [AngularFire](https://github.com/angular/angularfire)
 
 ## Development server
 
