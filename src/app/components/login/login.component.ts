@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 
@@ -14,8 +14,11 @@ export class LoginComponent implements OnInit {
 
   constructor (private userService: UserService, private router: Router) {
     this.formLogin = new FormGroup({
-      email: new FormControl(),
-      password: new FormControl()
+      email: new FormControl('', [Validators.required]),
+      password: new FormControl('', [
+        Validators.required,
+        Validators.minLength(6)
+      ]),
     });
   }
 
@@ -39,4 +42,19 @@ export class LoginComponent implements OnInit {
       .catch(error => console.log(error));
   }
 
+  /* checkcontrol for email in formLogin */
+  /* get email () {
+    return this.formLogin.get('email');
+  }
+ */
+  checkControl (controlName: string, errorName: string): boolean {
+    if (
+      this.formLogin.get(controlName)?.hasError(errorName) &&
+      this.formLogin.get(controlName)?.touched
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }

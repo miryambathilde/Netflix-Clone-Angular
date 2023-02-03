@@ -3,9 +3,10 @@
   background-repeat: no-repeat;
   background-image: url(../../../assets/images/login-background.jpg);
   height: 100vh;
+  width: 100vw;
 }
 .container {
-padding-top: 5%;
+  padding-top: 5%;
   width: 33%;
   min-width: 350px;
 
@@ -21,18 +22,37 @@ padding-top: 5%;
     gap: 15px;
   }
   .register {
-    width: 50%;
+    width: 52%;
     margin: auto;
     margin-top: 30px;
+    max-width: 350px;
   }
-    .btn {
-      padding: 7px 20px;
-      color: white;
-      &:is(.btn-warning) {
-        color: unset;
-      }
-      &:hover {
-        font-weight: bold;
-      }
+  .btn {
+    padding: 7px 20px;
+    color: white;
+    &:is(.btn-warning) {
+      color: unset;
+      font-size: 16px;
     }
+    &:hover {
+      font-weight: bold;
+    }
+    &.sign-in {
+      font-size: 18px;
+    }
+  }
+
+  span {
+    &.helper-text {
+      font-size: 11px;
+    }
+  }
+
+  p {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+
+
 }
