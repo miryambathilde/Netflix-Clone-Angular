@@ -13,17 +13,17 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
-    ...canActivate(() => redirectUnauthorizedTo(['/register']))
+    ...canActivate(() => redirectUnauthorizedTo(['/login']))
   },
   {
     path: 'search',
     component: SearchComponent,
-    ...canActivate(() => redirectUnauthorizedTo([ '/register' ]))
+    ...canActivate(() => redirectUnauthorizedTo([ '/login' ]))
   },
   {
     path: 'movie/:id',
     component: MovieDetailsComponent,
-    ...canActivate(() => redirectUnauthorizedTo([ '/register' ]))
+    ...canActivate(() => redirectUnauthorizedTo([ '/login' ]))
   },
   { path: '', pathMatch: 'full', redirectTo: '/home' },
   { path: '**', pathMatch: 'full', redirectTo: '/home' }

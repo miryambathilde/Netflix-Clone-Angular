@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 import { MoviesService } from 'src/app/services/movies.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +20,7 @@ export class HomeComponent implements OnInit {
   sciencefictionMovieResults?: any = [];
   thrillerMovieResults?: any = [];
 
-  constructor (private moviesService: MoviesService, private title: Title, private meta: Meta) { }
+  constructor (private moviesService: MoviesService, private userService: UserService, private title: Title, private meta: Meta, private router: Router) { }
 
   ngOnInit (): void {
     this.trendingMovies();
@@ -30,7 +32,6 @@ export class HomeComponent implements OnInit {
     this.sciencefictionMovies();
     this.thrillerMovies();
   }
-
 
   trendingMovies () {
     this.moviesService.getTrendingMovies().subscribe((result) => {
@@ -80,5 +81,4 @@ export class HomeComponent implements OnInit {
       this.thrillerMovieResults = result.results;
     });
   }
-
 }

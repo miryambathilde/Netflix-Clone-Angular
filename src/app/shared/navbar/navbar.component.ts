@@ -33,5 +33,4 @@ export class NavbarComponent implements OnInit {
       })
       .catch(error => console.log(error));
   }
-
 }

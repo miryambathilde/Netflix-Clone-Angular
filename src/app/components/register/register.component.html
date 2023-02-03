@@ -31,8 +31,10 @@
         <span class="helper-text text-white" data-error="wrong" data-success="right">* Password is required.
           Minium length 6 characters</span>
       </div>
-      <input class="btn btn-danger" [disabled]="!formRegister.valid" type="submit" value="Sign up">>
-    <h3 class="text-white text-center p-4 mb-4 fw-bold">LogIn with Google or members</h3>
+      <div class="sign-up">
+        <input class="btn btn-danger sign-up" [disabled]="!formRegister.valid" type="submit" value="Sign up">
+      </div>
+    <h3 class="text-white text-center p-4 mb-4 mt-4 fw-bold">LogIn with GOOGLE account or members</h3>
       <div class="login-button d-flex justify-content-center">
         <a class="nav-link btn btn-primary login" routerLink="/login">Login</a>
       </div>
