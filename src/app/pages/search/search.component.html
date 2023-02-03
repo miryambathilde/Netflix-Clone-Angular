@@ -1,0 +1,32 @@
+<div class="container mt-5 p-5">
+  <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="mb-3 col-lg-10">
+        <input type="text" class="form-control" formControlName="movieName"
+          placeholder="Search a movie...">
+      </div>
+      <div class="col-lg-2">
+        <button class="btn btn-danger">Search</button>
+      </div>
+    </div>
+  </form>
+  <div class="row mt-5 results" *ngIf="searchResult.length > 0">
+    <div class="col-lg-4" *ngFor="let s of searchResult">
+      <div class="row">
+        <div class="col-lg-3 mt-4 mb-4" *ngIf="s.poster_path || s.poster_path === null">
+          <img
+            [src]="s.poster_path ? 'https://image.tmdb.org/t/p/original/' + s.poster_path : './assets/images/no-image.jpg'"
+            [routerLink]="['/movie',s.id]">
+        </div>
+        <div class="col-lg-9 mt-4 mb-4">
+          <h5 class="fw-bold" >{{s.original_title}}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5" *ngIf="searchResult.length == 0">
+    <div class="col-lg-12">
+      <h3 class="text-center fw-bold">Oops! No results to show. Try another movie!</h3>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+.register {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../../../assets/images/login-background.jpg);
+  height: 100vh;
+  .container {
+    padding-top: 6%;
+    width: 20%;
+    min-width: 350px;
+  }
+  .btn {
+    padding: 7px 20px;
+    color: white;
+    &:hover {
+      font-weight: bold;
+    }
+  }
+
+  .btn {
+    padding: 7px 20px;
+    color: white;
+    &:hover {
+      font-weight: bold;
+    }
+  }
+
+  span {
+    &.helper-text {
+      font-size: 11px;
+    }
+  }
+  p {
+    &.login {
+      margin-top: 10px;
+      font-size: 20px;
+      text-transform: capitalize;
+    }
+  }
+
+  .sign-up {
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .register {
+    .container {
+        padding-top: 240px;
+        h3 {
+          margin-bottom: 0px!important;
+        }
+      }
+  }
+
+}

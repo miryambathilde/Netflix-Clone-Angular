@@ -1,0 +1,86 @@
+.login {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../../../assets/images/login-background.jpg);
+  height: 100vh;
+  width: 100vw;
+}
+.container {
+  padding-top: 5%;
+  width: 58%;
+  min-width: 350px;
+
+  .mb-3 {
+    padding: 0 20px
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .register {
+    width: 52%;
+    margin: auto;
+    margin-top: 30px;
+    max-width: 350px;
+  }
+  .btn {
+    padding: 7px 20px;
+    color: white;
+    &:is(.btn-warning) {
+      color: unset;
+      font-size: 16px;
+    }
+    &:hover,
+    :focus {
+      font-weight: bold;
+    }
+    &.sign-in {
+      font-size: 18px;
+    }
+  }
+
+  span {
+    &.helper-text {
+      font-size: 11px;
+    }
+  }
+
+  p {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+}
+
+@media only screen and (max-width: 1743px) and (min-width: 992) {
+  .login {
+    height: 100%;
+    padding-bottom: 40px;
+  }
+
+
+}
+
+@media only screen and (max-width: 991px) {
+  .login {
+    height: 100%;
+    padding-bottom: 40px;
+
+  }
+  .container {
+    padding-top: 214px;
+    h3 {
+      margin-bottom: 0 !important;
+    }
+
+    .register {
+      width: 86%;
+    }
+  }
+}
+
+

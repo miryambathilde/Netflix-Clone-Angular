@@ -1,0 +1,33 @@
+$red: #E50914;
+$white: #ffffff;
+$white-transparent: #ffffff5d;
+
+.rowposter {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.rowimg {
+  max-height: 100px;
+  object-fit: contain;
+  width: 100%;
+  box-sizing: content-box;
+  transition: transform 450ms;
+  margin-right: 7px;
+  border-radius: 5px;
+  border: 1px solid #797979;
+  -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  &:hover {
+    transform: scale(1.09);
+    cursor: pointer;
+  }
+}
+.largeposter {
+  max-height: 300px;
+}
