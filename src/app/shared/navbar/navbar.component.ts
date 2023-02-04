@@ -9,6 +9,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class NavbarComponent implements OnInit {
   navBackground: any;
+  showLogout: any = { 'display': 'block' };
   @HostListener('document:scroll') scrollover () {
     console.log(document.body.scrollTop, 'scrolllength#');
 
@@ -21,9 +22,19 @@ export class NavbarComponent implements OnInit {
     }
   }
 
+
   constructor(private userService: UserService, private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit (): void {
+    this.showButton()
+  }
+
+  showButton () {
+    if (this.router.url === '/login' || this.router.url === '/register') {
+      this.showLogout = { 'display': 'none' };
+    } else {
+      this.showLogout = { 'display': 'block' };
+    }
   }
 
   onClick () {

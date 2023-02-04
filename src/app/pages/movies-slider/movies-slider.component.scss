@@ -4,10 +4,10 @@ $red: #E50914;
 $background-carousel: #181818ab;
 
 .carousel-inner {
-  height: 800px;
+  height: 700px;
   .carousel-item {
     img {
-      height: 800px;
+      height: 700px;
       object-fit: cover;
     }
   }
@@ -29,5 +29,11 @@ $background-carousel: #181818ab;
   }
   p {
     color: $white;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .carousel-caption {
+    display: block !important;
   }
 }
