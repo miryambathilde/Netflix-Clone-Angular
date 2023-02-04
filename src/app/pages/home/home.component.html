@@ -14,6 +14,16 @@
     </div>
 
     <div class="row mt-4">
+      <h3 class="text-white">Discover Movies</h3>
+      <div class="rowposter mt-3 p-2">
+        <ng-container *ngFor="let d of discoverMoviesResults.slice(0, 10)">
+          <img src="https://image.tmdb.org/t/p/original/{{ d.poster_path }}" class="rowimg largeposter"
+            alt="..." [routerLink]="['/movie',d.id]">
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="row mt-4">
       <h3 class="text-white">Thriller Movies</h3>
       <div class="rowposter mt-3 p-2">
         <ng-container *ngFor="let th of thrillerMovieResults.slice(0, 10)">

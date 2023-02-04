@@ -1,6 +1,7 @@
 $white: #ffffff;
 $white-transparent: #ffffff5d;
 $red: #E50914;
+$background-carousel: #181818ab;
 
 .carousel-inner {
   height: 700px;
@@ -14,7 +15,7 @@ $red: #E50914;
 
 .carousel-caption {
   padding: 20px 30px;
-  background-color: #181818ab;
+  background-color: $background-carousel;
   border: 1px solid $white-transparent;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -28,5 +29,11 @@ $red: #E50914;
   }
   p {
     color: $white;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .carousel-caption {
+    display: block !important;
   }
 }

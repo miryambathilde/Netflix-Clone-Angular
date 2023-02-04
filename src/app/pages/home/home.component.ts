@@ -12,6 +12,7 @@ import { UserService } from 'src/app/services/user.service';
 export class HomeComponent implements OnInit {
 
   trendingMovieResults?: any = [];
+  discoverMoviesResults?: any = [];
   actionMovieResults?: any = [];
   adventureMovieResults?: any = [];
   animationMovieResults?: any = [];
@@ -24,6 +25,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit (): void {
     this.trendingMovies();
+    this.discoverMovies();
     this.actionMovies();
     this.adventureMovies();
     this.comedyMovies();
@@ -37,6 +39,13 @@ export class HomeComponent implements OnInit {
     this.moviesService.getTrendingMovies().subscribe((result) => {
       console.log(result, 'trendingresult#');
       this.trendingMovieResults = result.results;
+    });
+  }
+
+  discoverMovies () {
+    this.moviesService.getDiscoverMovies().subscribe((result) => {
+      console.log(result, 'discoverresult#');
+      this.discoverMoviesResults = result.results;
     });
   }
 
