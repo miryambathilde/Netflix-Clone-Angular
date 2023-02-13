@@ -6,7 +6,7 @@
     <div class="row">
       <h3 class="text-white">Trending Movies</h3>
       <div class="rowposter mt-3 p-2">
-        <ng-container *ngFor="let t of trendingMovieResults.slice(0, 10)">
+        <ng-container *ngFor="let t of trendingMoviesResults">
           <img src="https://image.tmdb.org/t/p/original/{{ t.poster_path }}"
             class="rowimg largeposter" alt="..." [routerLink]="['/movie',t.id]">
         </ng-container>
@@ -16,7 +16,7 @@
     <div class="row mt-4">
       <h3 class="text-white">Discover Movies</h3>
       <div class="rowposter mt-3 p-2">
-        <ng-container *ngFor="let d of discoverMoviesResults.slice(0, 10)">
+        <ng-container *ngFor="let d of discoverMoviesResults">
           <img src="https://image.tmdb.org/t/p/original/{{ d.poster_path }}" class="rowimg largeposter"
             alt="..." [routerLink]="['/movie',d.id]">
         </ng-container>
@@ -26,7 +26,7 @@
     <div class="row mt-4">
       <h3 class="text-white">Thriller Movies</h3>
       <div class="rowposter mt-3 p-2">
-        <ng-container *ngFor="let th of thrillerMovieResults.slice(0, 10)">
+        <ng-container *ngFor="let th of thrillerMovieResults">
           <img src="https://image.tmdb.org/t/p/original/{{ th.poster_path }}"
             class="rowimg largeposter" alt="..." [routerLink]="['/movie',th.id]">
         </ng-container>
@@ -36,7 +36,7 @@
     <div class="row mt-4">
       <h3 class="text-white">Action</h3>
       <div class="rowposter mt-3 p-2">
-        <ng-container *ngFor="let a of actionMovieResults.slice(0, 10)">
+        <ng-container *ngFor="let a of actionMovieResults">
           <img src="https://image.tmdb.org/t/p/original/{{ a.poster_path }}"
             class="rowimg largeposter" alt="..." [routerLink]="['/movie',a.id]">
         </ng-container>
@@ -46,7 +46,7 @@
     <div class="row mt-4">
       <h3 class="text-white">Adventure</h3>
       <div class="rowposter mt-3 p-2">
-        <ng-container *ngFor="let a of adventureMovieResults.slice(0, 10)">
+        <ng-container *ngFor="let a of adventureMovieResults">
           <img src="https://image.tmdb.org/t/p/original/{{ a.poster_path }}"
             class="rowimg largeposter" alt="..." [routerLink]="['/movie',a.id]">
         </ng-container>
@@ -56,7 +56,7 @@
     <div class="row mt-4">
       <h3 class="text-white">Animation</h3>
       <div class="rowposter mt-3 p-2">
-        <ng-container *ngFor="let a of animationMovieResults.slice(0, 10)">
+        <ng-container *ngFor="let a of animationMovieResults">
           <img src="https://image.tmdb.org/t/p/original/{{ a.poster_path }}"
             class="rowimg largeposter" alt="..." [routerLink]="['/movie',a.id]">
         </ng-container>
@@ -66,7 +66,7 @@
     <div class="row mt-4">
       <h3 class="text-white">Comedies</h3>
       <div class="rowposter mt-3 p-2">
-        <ng-container *ngFor="let c of comedyMovieResults.slice(0, 10)">
+        <ng-container *ngFor="let c of comedyMovieResults">
           <img src="https://image.tmdb.org/t/p/original/{{ c.poster_path }}"
             class="rowimg largeposter" alt="..." [routerLink]="['/movie',c.id]">
         </ng-container>
@@ -76,7 +76,7 @@
     <div class="row mt-4">
       <h3 class="text-white">Documentaries</h3>
       <div class="rowposter mt-3 p-2">
-        <ng-container *ngFor="let d of documentaryMovieResults.slice(0, 10)">
+        <ng-container *ngFor="let d of documentaryMovieResults">
           <img src="https://image.tmdb.org/t/p/original/{{ d.poster_path }}"
             class="rowimg largeposter" alt="..." [routerLink]="['/movie',d.id]">
         </ng-container>
@@ -86,7 +86,7 @@
     <div class="row mt-4">
       <h3 class="text-white">Science-Fiction</h3>
       <div class="rowposter mt-3 p-2">
-        <ng-container *ngFor="let sf of sciencefictionMovieResults.slice(0, 10)">
+        <ng-container *ngFor="let sf of sciencefictionMovieResults">
           <img src="https://image.tmdb.org/t/p/original/{{ sf.poster_path }}"
             class="rowimg largeposter" alt="..." [routerLink]="['/movie',sf.id]">
         </ng-container>

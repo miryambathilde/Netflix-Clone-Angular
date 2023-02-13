@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import { Movie } from 'src/app/interfaces/movies';
 import { MoviesService } from 'src/app/services/movies.service';
 import { UserService } from 'src/app/services/user.service';
 
@@ -11,15 +12,15 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class HomeComponent implements OnInit {
 
-  trendingMovieResults?: any = [];
-  discoverMoviesResults?: any = [];
-  actionMovieResults?: any = [];
-  adventureMovieResults?: any = [];
-  animationMovieResults?: any = [];
-  comedyMovieResults?: any = [];
-  documentaryMovieResults?: any = [];
-  sciencefictionMovieResults?: any = [];
-  thrillerMovieResults?: any = [];
+  trendingMoviesResults?: Movie[] = [];
+  discoverMoviesResults?: Movie[] = [];
+  actionMovieResults?: Movie[] = [];
+  adventureMovieResults?: Movie[] = [];
+  animationMovieResults?: Movie[] = [];
+  comedyMovieResults?: Movie[] = [];
+  documentaryMovieResults?: Movie[] = [];
+  sciencefictionMovieResults?: Movie[] = [];
+  thrillerMovieResults?: Movie[] = [];
 
   constructor (private moviesService: MoviesService, private userService: UserService, private title: Title, private meta: Meta, private router: Router) { }
 
@@ -38,7 +39,7 @@ export class HomeComponent implements OnInit {
   trendingMovies () {
     this.moviesService.getTrendingMovies().subscribe((result) => {
       console.log(result, 'trendingresult#');
-      this.trendingMovieResults = result.results;
+      this.trendingMoviesResults = result.results;
     });
   }
 
